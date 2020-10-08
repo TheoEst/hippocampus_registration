@@ -1,27 +1,27 @@
-# hippocampus_registration
-Deep learning based registration for Learn2Reg Challenge (Task 4 : MRI Hippocampus)
+# Symmetric deep learning based registration using noisy segmentation labels (Learn2Reg Task 4 : MRI Hippocampus)
 
 
-This repository is a Pytorch implementation  of the participation for the Task 4 of the Learning2Reg Challenge : https://learn2reg.grand-challenge.org/ .
+This repository corresponds to the 3rd ranked for Task 4 (hippocampus) and 2nd overall method for the Learn2Reg Challenge 2020 : https://learn2reg.grand-challenge.org/.
 
-You can also consult the repository for the Task 3 : https://github.com/TheoEst/abdominal_registration
-
+You can also consult the repository for the Task 3 : https://github.com/TheoEst/abdominal_registration.
+Implementation is made with Pytorch.
 
 ## Use this repository
 
-In order to use this repository, you only need to download the Learn2Reg Task 4 Data : https://learn2reg.grand-challenge.org/Datasets/ and put it on the ./data/ folder. 
+In order to use this repository, you only need to download the Learn2Reg Task 4 Data : https://learn2reg.grand-challenge.org/Datasets/ and add it on the ./data/ folder. 
 You also need to run the preprocessing step to remove the constant padding with the file *zeros_padding.py*.
 
-If you want to apply to run the *pretrain.py* file, you need to download the Oasis 3 dataset (https://www.oasis-brains.org/) and put it on the ./data/ folder.
+If you want to run the *pretrain.py* file to pretrain the network on the Oasis 3 dataset, you need to download the Oasis 3 dataset (https://www.oasis-brains.org/) and add it on the ./data/ folder.
 
 ## Methodology 
 
-Our method comes from the article  *Deep Learning-Based Concurrent Brain Registration and Tumor Segmentation*, **Estienne T., Lerousseau M. et al.**, 2020 (https://www.frontiersin.org/articles/10.3389/fncom.2020.00017/full).
+Our method is based on the article  *Deep Learning-Based Concurrent Brain Registration and Tumor Segmentation*, **Estienne T., Lerousseau M. et al.**, 2020 (https://www.frontiersin.org/articles/10.3389/fncom.2020.00017/full).
 
-We proposed a 3D Unet for registration trained with 3 losses :
+
+In this work we proposed a deep learning based registration using 3D Unet as backbone with 3 losses :
 * Reconstruction loss ( Mean Square Error or Local Cross Correlation)
 * Segmentation loss ( Dice Loss between deformed segmentation and ground truth segmentation)
-* Regularisation loss (To prevent from unrealistic grid)
+* Regularisation loss (To force smoothness)
 
 In the proposed architecture, the moving and fixed image are passed independently through the encoder, and then merged with subtraction operation.
 
@@ -74,7 +74,7 @@ Examples :
 
 To transform the predicted data into a compressed file, just use the *create_submission.py* file. For instance ```python3 ./submission/create_submission.py ./save/submission/Baseline+symmetric+pretrain ```. You will obtain a folder called  *Baseline+symmetric+pretrain_compressed* and a zip file *Baseline+symmetric+pretrain_submission* which you can submit. 
 
-To evaluate the perfomrance, just apply the *apply_evaluation.py* file. For instance ```python3 ./submission/apply_evaluation.py Baseline+symmetric+pretrain_compressed```will generate a csv file in the *./save/evaluation/* folder with all the metrics for each pairs (Dice, Dice30, Hausdorff and standard deviation of Jacobian).
+To evaluate the performance, you need just to run the *apply_evaluation.py* file. For instance ```python3 ./submission/apply_evaluation.py Baseline+symmetric+pretrain_compressed``` will generate a csv file in the *./save/evaluation/* folder with all the metrics for each pairs (Dice, Dice30, Hausdorff and standard deviation of Jacobian).
 
 ## Performances 
 
