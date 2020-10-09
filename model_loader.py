@@ -8,7 +8,7 @@ import torch
 from collections import OrderedDict
 
 main_path = '.'
-repo = 'abdominal_registration'
+repo = 'hippocampus_registration'
 
 networks_path = main_path + '/' + repo + '/'
 load_model_path = main_path + '/save/models/'

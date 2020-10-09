@@ -5,7 +5,7 @@ Created on Fri Jan  3 16:40:07 2020
 @author: T_ESTIENNE
 """
 import numpy as np
-from abdominal_registration import affine_transform
+from hippocampus_registration import affine_transform
 import random 
 
 def crop(array, size):

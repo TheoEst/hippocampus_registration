@@ -8,7 +8,7 @@ import torch
 import numpy as np
 import os
 
-main_path = './abdominal_registration/'
+main_path = './hippocampus_registration/'
 
 def to_var(args, x):
 

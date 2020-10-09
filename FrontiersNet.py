@@ -7,7 +7,7 @@ Created on Fri Jan 31 15:32:53 2020
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from abdominal_registration import blocks
+from hippocampus_registration import blocks
 
 def integral3DImage(deformable):
     

@@ -5,7 +5,7 @@ Created on Fri Jan 31 15:36:01 2020
 @author: T_ESTIENNE
 """
 import matplotlib.pyplot as plt
-from abdominal_registration import utils
+from hippocampus_registration import utils
 import numpy as np
 
 def plot_registration_results(gt_sample, pred_sample, batch, args, loss=None, 

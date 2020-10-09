@@ -14,16 +14,16 @@ import SimpleITK as sitk
 import numpy as np
 
 # My package
-from abdominal_registration import Dataset
-from abdominal_registration import model_loader
-from abdominal_registration import utils
-from abdominal_registration import transformations
-from abdominal_registration import main
-from abdominal_registration import numpy2nifty
-from abdominal_registration import FrontiersNet
+from hippocampus_registration import Dataset
+from hippocampus_registration import model_loader
+from hippocampus_registration import utils
+from hippocampus_registration import transformations
+from hippocampus_registration import main
+from hippocampus_registration import numpy2nifty
+from hippocampus_registration import FrontiersNet
 
 main_path = os.path.abspath(__file__)
-repo = 'abdominal_registration/'
+repo = 'hippocampus_registration/'
 main_path = './' + repo
 
 

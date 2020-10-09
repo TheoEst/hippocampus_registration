@@ -16,15 +16,15 @@ import torch.utils.tensorboard as tensorboard
 import torchvision
 
 # My package
-from abdominal_registration import ImageTensorboard
-from abdominal_registration import log
-from abdominal_registration import transformations
-from abdominal_registration import utils
-from abdominal_registration import losses
-from abdominal_registration import model_loader
-from abdominal_registration import Dataset
+from hippocampus_registration import ImageTensorboard
+from hippocampus_registration import log
+from hippocampus_registration import transformations
+from hippocampus_registration import utils
+from hippocampus_registration import losses
+from hippocampus_registration import model_loader
+from hippocampus_registration import Dataset
 
-repo = 'abdominal_registration/'
+repo = 'hippocampus_registration/'
 main_path = './' + repo
 model_names = ['FrontiersNet']
 

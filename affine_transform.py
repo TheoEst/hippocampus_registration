@@ -8,7 +8,7 @@ import scipy
 import scipy.ndimage
 import numpy as np
 import random
-from abdominal_registration import rotate
+from hippocampus_registration import rotate
 from threadpoolctl import threadpool_limits
 
 def RandomTranslation(max_translation=30, transform_matrix=None):

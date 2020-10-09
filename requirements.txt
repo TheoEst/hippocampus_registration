@@ -1,0 +1,12 @@
+SimpleITK
+torch
+torchvision
+tqdm
+numpy
+pandas
+matplotlib
+nibabel
+threadpoolctl
+scipy
+evalutils
+surface_distance
