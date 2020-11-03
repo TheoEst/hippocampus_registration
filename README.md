@@ -82,10 +82,11 @@ Results on the validation set
   
 Method | Dice | Dice 30 | Hausdorff Distance | Jacobian
 ------------ | ------------- | ------------ | ------------- | -------------
-Baseline  | 0.796 | 0.777 | 2.12 | **0.017**
-Baseline + sym.  | 0.830 | 0.818 | 1.68 | 0.018
-Baseline + sym. + pretrain | **0.839** |**0.827**  | **1.63** | 0.024 
-
+Unregistered | 0.55 | 0.36 | 3.91 | 
+Baseline  | 0.796 | 0.777 | 2.12 | **0.067**
+Baseline + sym.  | 0.830 | 0.818 | 1.68 | 0.071
+Baseline + sym. + pretrain | **0.839** |**0.827**  | **1.63** | 0.093 
+Test set | 0.85 | 0.84 | 1.51 | 0.09
 
 Example of the results on the validation set :
 
