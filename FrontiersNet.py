@@ -63,9 +63,9 @@ class FrontiersNet(nn.Module):
         self.deep_supervision = deep_supervision
         
         kwargs = {'pool_blocks': pool_blocks, 'channels': channels,
-          'activation_type': activation_type,
-          'instance_norm': instance_norm, 'batch_norm' :batch_norm,
-          }
+                  'activation_type': activation_type,
+                  'instance_norm': instance_norm, 'batch_norm' :batch_norm,
+                  'nb_Convs': nb_Convs}
                 
         # Encoder
         self.encoder = blocks.Encoder(input_channel=input_channel,
