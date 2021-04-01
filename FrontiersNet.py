@@ -40,7 +40,7 @@ class FrontiersNet(nn.Module):
                  pool_blocks=4,
                  channels=[4, 8, 16, 32, 64, 128, 256],
                  activation_type='leaky',
-                 last_activation=None,
+                 last_activation='sigmoid',
                  instance_norm=False,
                  batch_norm=False,
                  nb_Convs=[1, 1, 1, 1, 1, 1, 1],
