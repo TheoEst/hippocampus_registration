@@ -56,7 +56,7 @@ def get_pad_index(array):
     
     return x_min, x_max, y_min, y_max, z_min, z_max
 
-main_path = './abdominal_registration/data/'
+main_path = './hippocampus_registration/data/'
 main_path += 'L2R_Task4_HippocampusMRI/'
 train = False
 if train:
