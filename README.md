@@ -1,6 +1,8 @@
 # Deep learning based registration using spatial gradients and noisy segmentation labels (Learn2Reg Task 4 : MRI Hippocampus)
 
 
+[Edit 12/21] : Models are now available on Zenodo for both hippocampus and abdominal registration
+
 This repository contains a Pytorch implementation of [Deep learning based registration using spatial gradients and noisy segmentation labels](https://arxiv.org/pdf/2010.10897.pdf). It corresponds to the 3rd ranked for Task 4 (hippocampus) and 2nd overall method for the Learn2Reg Challenge 2020 : https://learn2reg.grand-challenge.org/.
 
 
@@ -33,6 +35,8 @@ In the proposed architecture, the moving and fixed image are passed independentl
 </p>
   
 ## Models
+
+Models can be download on Zenodo on the following link : https://zenodo.org/record/5762347#.Ya5u4edCewA
 
 4 pretrained models are available on the ./models folder : 
 * Baseline model
